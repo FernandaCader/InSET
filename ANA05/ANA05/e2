@@ -1,0 +1,15 @@
+import numpy as np
+
+# Crear una matriz de 2x3 con ceros
+matriz_ceros = np.zeros((2, 3))
+
+# Crear una matriz de 2x3 con unos
+matriz_unos = np.ones((2, 3))
+
+# Mostrar la matriz de ceros en pantalla
+print("Matriz de ceros:")
+print(matriz_ceros)
+
+# Mostrar la matriz de unos en pantalla
+print("\nMatriz de unos:")
+print(matriz_unos)

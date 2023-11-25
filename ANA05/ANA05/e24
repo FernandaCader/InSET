@@ -1,0 +1,7 @@
+import math
+
+# Calcular e^5
+exp_result = math.exp(5)
+
+# Mostrar el resultado en pantalla
+print("e^5:", exp_result)

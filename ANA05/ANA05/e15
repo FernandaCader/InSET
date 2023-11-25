@@ -1,0 +1,12 @@
+import numpy as np
+
+# Crear una nueva matriz de 2x2
+matriz = np.array([[1, 2],
+                   [3, 4]])
+
+# Convertir la matriz en un vector utilizando flatten()
+vector = matriz.flatten()
+
+# Mostrar el vector resultante en pantalla
+print("Vector resultante:")
+print(vector)

@@ -1,0 +1,7 @@
+import math
+
+# Calcular el máximo común divisor de 10 y 125
+gcd_result = math.gcd(10, 125)
+
+# Mostrar el resultado en pantalla
+print("Máximo común divisor de 10 y 125:", gcd_result)

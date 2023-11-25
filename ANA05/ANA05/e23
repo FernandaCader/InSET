@@ -1,0 +1,11 @@
+import math
+
+# Truncar el número 1.001
+truncado_1 = math.trunc(1.001)
+
+# Truncar el número 1.999
+truncado_2 = math.trunc(1.999)
+
+# Mostrar los resultados en pantalla
+print("Truncado de 1.001:", truncado_1)
+print("Truncado de 1.999:", truncado_2)

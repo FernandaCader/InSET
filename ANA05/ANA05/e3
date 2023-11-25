@@ -1,0 +1,7 @@
+import numpy as np
+
+# Crear una matriz de identidad de 3x3
+matriz_identidad = np.eye(3)
+
+# Mostrar la matriz de identidad en pantalla
+print(matriz_identidad)

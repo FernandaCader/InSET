@@ -1,0 +1,10 @@
+import math
+
+# Valor a redondear hacia arriba
+numero = 1.001
+
+# Utilizar la función ceil para redondear hacia arriba
+resultado = math.ceil(numero)
+
+# Mostrar el resultado en pantalla
+print("Resultado de math.ceil(1.001):", resultado)

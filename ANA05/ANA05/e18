@@ -1,0 +1,16 @@
+import numpy as np
+
+# Crear la primera matriz de ejemplo de 2x2
+matriz1 = np.array([[1, 2],
+                   [3, 4]])
+
+# Crear la segunda matriz de ejemplo de 2x2 con los mismos tamaños
+matriz2 = np.array([[5, 6],
+                   [7, 8]])
+
+# Realizar la suma entre las dos matrices
+resultado = matriz1 + matriz2
+
+# Mostrar el resultado en pantalla
+print("Resultado de la suma:")
+print(resultado)

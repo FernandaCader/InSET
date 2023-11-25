@@ -1,0 +1,7 @@
+import math
+
+# Calcular el factorial de 10
+factorial_10 = math.factorial(10)
+
+# Mostrar el resultado en pantalla
+print("Factorial de 10:", factorial_10)

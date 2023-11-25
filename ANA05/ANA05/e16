@@ -1,0 +1,12 @@
+import numpy as np
+
+# Crear una matriz de 2x2
+matriz = np.array([[1, 2],
+                   [3, 4]])
+
+# Obtener la traspuesta de la matriz
+traspuesta = matriz.T
+
+# Mostrar la traspuesta en pantalla
+print("Traspuesta de la matriz:")
+print(traspuesta)

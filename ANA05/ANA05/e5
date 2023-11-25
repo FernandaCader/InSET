@@ -1,0 +1,12 @@
+import numpy as np
+
+# Crear una matriz de 2x4
+matriz = np.array([[1, 2, 3, 4],
+                   [5, 6, 7, 8]])
+
+# Acceder al elemento en la fila 1 (segunda fila) y columna 2 (tercera columna)
+elemento = matriz[1, 2]
+
+# Mostrar el elemento en pantalla
+print("Elemento en la fila 1, columna 2:")
+print(elemento)

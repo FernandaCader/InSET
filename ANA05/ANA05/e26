@@ -1,0 +1,7 @@
+import math
+
+# Calcular la raíz cuadrada de 144
+raiz_cuadrada = math.sqrt(144)
+
+# Mostrar el resultado en pantalla
+print("Raíz cuadrada de 144:", raiz_cuadrada)

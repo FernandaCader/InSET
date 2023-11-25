@@ -1,0 +1,10 @@
+import math
+
+# Valor a redondear hacia abajo
+numero = 1.001
+
+# Utilizar la función floor para redondear hacia abajo
+resultado = math.floor(numero)
+
+# Mostrar el resultado en pantalla
+print("Resultado de math.floor(1.001):", resultado)

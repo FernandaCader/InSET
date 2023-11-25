@@ -1,0 +1,11 @@
+import math
+
+# Calcular 12.5^2.8
+resultado1 = math.pow(12.5, 2.8)
+
+# Calcular 144^0.5
+resultado2 = math.pow(144, 0.5)
+
+# Mostrar los resultados en pantalla
+print("12.5^2.8:", resultado1)
+print("144^0.5:", resultado2)
