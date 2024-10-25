@@ -1,0 +1,114 @@
+/* 
+ * Santiago Acosta Villa Abrille | Web Developer
+ * Portinos Productora
+ */
+var md = new MobileDetect(window.navigator.userAgent);
+// console.log( md.tablet() );  
+function send_suscribe(){
+   $.post( ajax_script.ajax_url, { 
+        name: $( 'input[name=name]' ).val(), 
+        apellido: $( 'input[name=apellido]' ).val(), 
+        email: $( 'input[name=email]' ).val(), 
+        action: "send_suscribe"
+    }).done(function( data ) {
+        $("#suscribite").html(data);
+    }); 
+}
+
+function ver_mas_notas(page,id,cat){
+	window.page=window.page+1;
+
+	$.post( ajax_script.ajax_url, { 
+		id: id, 
+		page: window.page,
+		key: cat,
+        action: "view_more"
+	}).done(function( data ) {
+    if(data!=0){
+      $(".mas_notas").append(data);
+    }else{
+      $(".ver_mas_notas").html("Volver //")
+      $(".ver_mas_notas").parent().attr("href","https://blog.portinos.com/");
+      $(".ver_mas_notas").parent().attr("onclick","javascript:window.location.href='https://blog.portinos.com/'");
+    }
+  	});
+	return false;
+}
+
+( function( $ ) {
+
+  $( document ).ready(function() {
+
+
+    $( ".gallery img" ).click(function() {
+      $(".gallery_menu img").removeClass("active");
+      $(this).addClass("active");
+      var src=$(this).data("pc");
+      var caption=$(this).data("caption");
+      $('.gallery .gallery_content > img').attr('src',src);
+      $('.gallery .gallery_content .caption').html(caption);
+      // $('#portinosModal .modal-content').html('<img src="'+src+'">');
+      // $('#portinosModal').modal("show");
+    });
+
+    if(md.tablet()!=null){
+      console.log("es tablet");
+        $( 'img[data-tablet!=""]' ).each(function( index ) {
+        $( this ).attr("src",$(this).data("tablet"));
+      });
+    }
+    if(md.phone()!=null){
+      console.log("es mobile");
+      $(".carousel").carousel();
+      $( 'img[data-mobile!=""]' ).each(function( index ) {
+        $( this ).attr("src",$(this).data("mobile"));
+      });
+    }
+    if(md.phone()==null && md.tablet()==null){
+      console.log("es pc");
+        $( 'img[data-pc!=""]' ).each(function( index ) {
+        $( this ).attr("src",$(this).data("pc"));
+      });
+    }
+
+      $( '.content_single img[data-original!=""]' ).each(function( index ) {
+        $( this ).attr("src",$(this).data("original"));
+      });
+    
+
+
+    // Custom 
+    var stickyToggle = function(sticky, stickyWrapper, scrollElement) {
+      var stickyHeight = sticky.outerHeight();
+      var stickyTop = stickyWrapper.offset().top;
+      if (scrollElement.scrollTop() >= stickyTop){
+        // stickyWrapper.height(stickyHeight);
+        sticky.addClass("is-sticky");
+        $(".navbar-brand").addClass("d-lg-block");
+      }
+      else{
+        sticky.removeClass("is-sticky");
+        $(".navbar-brand").removeClass("d-lg-block");
+        stickyWrapper.height('auto');
+      }
+    };
+    
+    // Find all data-toggle="sticky-onscroll" elements
+    $('[data-toggle="sticky-onscroll"]').each(function() {
+      var sticky = $(this);
+      var stickyWrapper = $('<div>').addClass('sticky-wrapper'); // insert hidden element to maintain actual top offset on page
+      sticky.before(stickyWrapper);
+      sticky.addClass('sticky');
+      
+      // Scroll & resize events
+      $(window).on('scroll.sticky-onscroll resize.sticky-onscroll', function() {
+        stickyToggle(sticky, stickyWrapper, $(this));
+      });
+      
+      // On page load
+      stickyToggle(sticky, stickyWrapper, $(window));
+    });
+      
+  });
+
+} )( jQuery );

@@ -1,0 +1,92 @@
+/*// Small devices (landscape phones, 576px and down)*/
+@media (min-width: 1px) {
+  .show_mobile{display: block;}
+  .hidden_mobile{display: none;}
+}
+@media (min-width: 319px) {
+  #post.news_bottom .thumb div{
+    margin-top: 40px
+  }
+  #post.news_bottom .post_title{
+    font-size: 20px;
+  }
+  #agenda .dia{
+      width: 100%;
+      padding-right: 30px;
+      text-align: center!important;
+      padding-left: 60px;
+      margin-bottom:30px;
+  }
+  #agenda #event_list_agenda h1{
+      /*text-align: center;*/
+  }
+  #agenda .seguir_leyendo{
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+  #agenda .line{
+    margin: 15px auto;
+  }
+  #footer .social{
+    top:20px;
+    bottom: auto
+  }
+  .show_mobile{display: block;}
+  .hidden_mobile{display: none;}
+}
+
+/*// Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {
+  #agenda .line{
+    margin: 15px 0;
+  }
+  #agenda .seguir_leyendo{
+    width: 100%;
+    display: block;
+    text-align: left;
+  }
+  #agenda .dia{
+      width: 100%;
+      padding-right: 30px;
+      text-align: right!important;
+      padding-left: 0px;
+  }
+  #post.news_bottom .post_title{
+    font-size: 20px;
+  }
+  #post.news_bottom .thumb div{
+    margin-top: 0px
+  }
+  .show_mobile{display: none;}
+  .hidden_mobile{display: block;}
+}
+/*// Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+  #post .thumb > div{
+    max-height: 500px;
+  }
+  #post.news_bottom .thumb div{
+    /*max-height: 500px;*/
+  }
+  #footer .social{
+    top:auto;
+    bottom: 0px
+  }
+  #page .content_single img{
+    max-width: 100%!important;
+    height: auto;
+  }
+
+}
+/*// Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) { 
+  
+}
+/*// Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+  #page{
+    padding-left:20px;
+    padding-right:20px;
+  }
+}
